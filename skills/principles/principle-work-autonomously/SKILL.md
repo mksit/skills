@@ -7,6 +7,10 @@ description: "Apply when you are about to hand a choice back to the user, when a
 
 Once the user hands you the work, every next move is yours: decide, act, and report what you decided. A wrong decision is reversible and reviewable, so it usually costs less than a session blocked on the user.
 
+**Never call `AskUserQuestion`.** Its dialog blocks the whole session until the user answers: no decision for a waiting subagent, no merge, no next job. Settle every choice through the bullets below. Anything only the user can give goes in your reply as plain text, and the work keeps running.
+
+When you plan checks, brief or monitor subagents, or work against a deadline, call the Skill tool with "principle-no-over-defending".
+
 - **A design or scope choice.** If you have a recommendation, take it and give the reason in one line. To form one, call the Skill tool with "principle-experience-first". If you have none, have the **advisor subagent** (the `fable-advisor` agent) settle it. Record the decision where the work is tracked (the ticket, the commit) and carry on.
 - **A subagent's open choices.** Settle them the same way, then resume that subagent with the decisions.
 - **Independent work.** Run it at the same time. One piece waits for another only when it reads the other's result or writes the other's state (call the Skill tool with "principle-separate-before-serializing-shared-state").
