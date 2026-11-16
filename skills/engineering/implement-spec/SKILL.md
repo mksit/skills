@@ -14,7 +14,7 @@ The goal is the entire spec implemented on a single **integration branch**, with
 
 The tickets are not a list of steps. They are a **task graph** with blocking relationships between them. This means there is always a **frontier** of tickets which are ready to be grabbed.
 
-Start every subagent with a fresh context window. Dispatch each one as the plugin's role agent named below. The `analyst` agent reads, the `implementer` agent changes the repo, and the **advisor subagent** (the `fable-advisor` agent) judges. If your harness doesn't have them, use a general-purpose subagent with the same brief. The role agent already carries the standing rules, so the brief only needs the pointers and what's different about this ticket.
+Start every subagent with a fresh context window. Dispatch each one as the plugin's role agent named below. The `analyst` agent reads, the `implementer` agent changes the repo, and the **advisor subagent** (the `fable-advisor` agent) judges. If your harness doesn't have them, use a general-purpose subagent with the same brief. The role agent already carries the standing rules, so the brief only needs the pointers and what's different about this ticket. Write every brief by [`brief-rules.md`](brief-rules.md) (the template, measuring, and the rules the brief binds), and point the subagent at it by its absolute path.
 
 Communication to and from subagents should be sparse. Communicate primarily through **context pointers**: to the spec, tickets, research notes, and previous commits. Don't duplicate information already available via pointers.
 

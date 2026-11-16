@@ -31,7 +31,9 @@ Break the work into **tracer bullet** tickets.
 <vertical-slice-rules>
 
 - Each slice cuts a narrow but COMPLETE path through every layer (schema, API, UI, tests): vertical, NOT a horizontal slice of one layer
-- A completed slice is demoable or verifiable on its own
+- A completed slice is verifiable on its own by its **deciding check**: the smallest, cheapest check that shows its deliverable wrong (a unit test, a small or checked-in input). Each acceptance criterion is an observable output of that check
+- A slice runs an expensive check (real hardware, a long run, a real end-to-end execution) only when that run's result is the slice's deliverable. A slice that builds a tool proves the tool runs; the first real use of the tool happens in the slice that needs its result
+- The **full suite** runs once, on the integration head after the last ticket, never inside a ticket
 - Each slice is sized to fit in a single fresh context window
 - Any prefactoring should be done first. To find it, call the Skill tool with "principle-subtract-before-you-add": each subtraction is its own ticket and blocks the tickets that add, except in a wide refactor, whose subtraction is the contract step
 
@@ -45,7 +47,7 @@ When a new API replaces an old one, call the Skill tool with "principle-migrate-
 
 ### 4. Quiz the user
 
-First, dispatch the **advisor subagent** (the `fable-advisor` agent) on the draft breakdown: its slices, sizes and blocking edges. Fold its verdict in, and tell the user what it changed.
+First, dispatch the **advisor subagent** (the `fable-advisor` agent) on the draft breakdown: its slices, sizes, blocking edges and each ticket's deciding check. The advisor cuts every check that changes no decision, and moves every expensive run to the ticket that needs its result. Fold its verdict in, and tell the user what it changed.
 
 Present the proposed breakdown as a numbered list. For each ticket, show:
 

@@ -59,7 +59,7 @@ Exception: if a prototype produced a snippet that encodes a decision more precis
 A list of testing decisions that were made. Include:
 
 - A description of what makes a good test (only test external behavior, not implementation details)
-- Which modules will be tested
+- Which modules will be tested, each with its deciding check: the smallest, cheapest input that shows it wrong. An expensive run (real hardware, hours of wall time) appears only where its result is the deliverable. The full suite runs once, at the end
 - Prior art for the tests (i.e. similar types of tests in the codebase)
 
 ## Out of Scope
