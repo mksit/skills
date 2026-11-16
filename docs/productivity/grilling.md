@@ -1,3 +1,5 @@
+> **Archived.** This skill was removed from the plugin in v1.4.0 and is no longer maintained. `interviewing` replaces it ([page](https://aihero.dev/skills-interviewing)). The page stays up for reference.
+
 ## What it does
 
 `grilling` is the interview loop that stress-tests a plan, a decision, or an idea before anyone acts on it. It maps the subject as a **decision tree**: every decision branches into the decisions that hang off it, and interviews you branch by branch until no assumption stays unstated.

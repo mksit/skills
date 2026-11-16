@@ -1,3 +1,5 @@
+> **Archived.** This skill was removed from the plugin in v1.4.0 and is no longer maintained. `interview-me` replaces it ([page](https://aihero.dev/skills-interview-me)). The page stays up for reference.
+
 ## What it does
 
 `grill-me` takes a **loose idea** and interviews you until you can commit to it. You do not need a worked-out plan to start, because the [session](https://www.aihero.dev/ai-coding-dictionary/session) exists to produce one. It asks in **rounds**. Each round is the whole **frontier**, which is every question whose prerequisites you have already settled. So it never asks you something that depends on an answer it hasn't heard yet.

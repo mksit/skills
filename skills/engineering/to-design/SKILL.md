@@ -1,23 +1,23 @@
 ---
 name: to-design
-description: Settle the shape of a change after grilling and before the spec. Ground it in the code it touches, sketch radically different shapes in parallel, screen them, and have the advisor choose. Use when grilling hands off its settled decisions and shape questions, when the user asks for a design, or when to-spec finds no design record.
+description: Settle the shape of a change after the interview and before the spec. Ground it in the code it touches, sketch radically different shapes in parallel, screen them, and have the advisor choose. Use when interviewing hands off its settled decisions and shape questions, when the user asks for a design, or when to-spec finds no design record.
 ---
 
 # To Design
 
-It runs between grilling and the spec:
+It runs between interviewing and the spec:
 
 ```
-grilling → to-design → to-spec
+interviewing → to-design → to-spec
 ```
 
 The issue tracker should have been provided to you. If not, tell the user to run `/setup-matt-pocock-skills`.
 
 Everything `to-design` keeps lives on the issue tracker or in the conversation. Subagents return their findings in their reports, so their briefs name no notes file.
 
-Grilling settles **what** and **why** with the user, and designs nothing. `to-design` settles **how**: the modules, interfaces, data shapes and seams of a change, in the vocabulary of `codebase-design` (call the Skill tool with "codebase-design" if it isn't loaded). Its input is grilling's settled decisions and **shape questions**. Its output is a **design record**, the input `to-spec` takes. `to-design` writes no implementation and changes no code.
+Interviewing settles **what** and **why** with the user, and designs nothing. `to-design` settles **how**: the modules, interfaces, data shapes and seams of a change, in the vocabulary of `codebase-design` (call the Skill tool with "codebase-design" if it isn't loaded). Its input is the interview's settled decisions and recorded defaults and **shape questions**. Its output is a **design record**, the input `to-spec` takes. `to-design` writes no implementation and changes no code.
 
-It settles every shape question grilling handed it, in one design. Your first shape is unlikely to be the best (Ousterhout, "design it twice"), so the record always weighs at least two.
+It settles every shape question the interview handed it, in one design. Your first shape is unlikely to be the best (Ousterhout, "design it twice"), so the record always weighs at least two.
 
 ## Steps
 
@@ -50,7 +50,7 @@ It settles every shape question grilling handed it, in one design. Your first sh
 
 5. **Choose.** Dispatch the **advisor subagent** (the `fable-advisor` agent) with the grounding, the surviving shapes and the constraints. It compares them on depth, locality and seam placement. It picks a base, names what to graft from the others, and names the risk that decides the choice. **Done when:** one shape is chosen, with its reason.
 
-6. **Agree.** Show the user the chosen shape, the advisor's verdict, and each rejected shape with the reason it lost. Word the question so "yes" accepts the chosen shape. Pushback on the shape is new grounding: take it back to step 1. Pushback on what or why reopens grilling: call the Skill tool with "grilling" for that branch, then return here. **Done when:** the user accepts a shape.
+6. **Agree.** Show the user the chosen shape, the advisor's verdict, and each rejected shape with the reason it lost. Word the question so "yes" accepts the chosen shape. Pushback on the shape is new grounding: take it back to step 1. Pushback on what or why reopens the interview: call the Skill tool with "interviewing" for that branch, then return here. **Done when:** the user accepts a shape.
 
 7. **Record.** Write the design record per [DESIGN-RECORD.md](DESIGN-RECORD.md) and publish it to the issue tracker. `to-spec` and `to-tickets` take the shape and seams from it.
 

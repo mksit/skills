@@ -28,6 +28,6 @@ Stop for the user only when no work is left that doesn't wait on them:
 
 Then ask for all of them in one message.
 
-When the user asks to be asked (`grilling`, a questionnaire), asking is the work, and this principle steps aside.
+When the user asks to be interviewed (`interviewing`, a questionnaire), the questions that skill's bar admits are the work, and this principle steps aside for them.
 
 **Done when** your report ends on work done or work started, with every choice in it carrying its decision and one-line reason. Its only questions are the stops above, asked together once nothing else can run.

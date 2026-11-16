@@ -1,0 +1,5 @@
+interface:
+  display_name: "Interview Me"
+  short_description: "Interview a design against the repo's docs and record its terms"
+policy:
+  allow_implicit_invocation: false

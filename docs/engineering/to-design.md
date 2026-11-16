@@ -20,7 +20,7 @@ The idea comes from Ousterhout's "design it twice": your first shape is unlikely
 
 ## When it runs
 
-`to-design` runs after every grilling session. Grilling settles what you are building and why, and it designs nothing: each time it meets a question about shape (a module, an interface, a data shape, a seam), it writes that question down and moves on. When the grilling is done, it passes the settled decisions and the shape questions to `to-design`. The next step takes the shape from there:
+`to-design` runs after every interview. Interviewing settles what you are building and why, and it designs nothing: each time it meets a question about shape (a module, an interface, a data shape, a seam), it writes that question down and moves on. When the interview is done, it passes the settled decisions and the shape questions to `to-design`. The next step takes the shape from there:
 
 | Next step | Where it takes the shape |
 | --- | --- |
@@ -33,10 +33,10 @@ You can also call it yourself ("design this"), and [improve-codebase-architectur
 ## Where it fits
 
 ```txt
-grilling → to-design → to-spec → to-tickets → implement
+interviewing → to-design → to-spec → to-tickets → implement
 ```
 
-If you push back on the shape, `to-design` starts again from the grounding step. If you push back on what or why, it reopens grilling for that branch, then comes back. `to-design` never implements anything.
+If you push back on the shape, `to-design` starts again from the grounding step. If you push back on what or why, it reopens the interview for that branch, then comes back. `to-design` never implements anything.
 
 ## It's working if
 

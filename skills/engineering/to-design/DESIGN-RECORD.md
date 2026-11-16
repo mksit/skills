@@ -6,7 +6,7 @@ The record that `to-design` hands back. One page. Use the project's `GLOSSARY.md
 
 ## Questions
 
-*The settled decisions from grilling that this design rests on, and each shape question it settles, one line each.*
+*The settled decisions from the interview that this design rests on, and each shape question it settles, one line each.*
 
 ## Constraints
 
